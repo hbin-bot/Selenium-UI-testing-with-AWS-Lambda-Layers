@@ -11,12 +11,12 @@ This is an example of set up Selenium testing with AWS lambda layers Python3.6
 ── /seleniumLayer/  # lambda layers
   ├── /selenium  lambda layer of selenium lib
   │  └──/python/      # python libs
-  │   └── /lib/    
-  │     └── /python3.6/*    
+  │   └── /lib/
+  │     └── /python3.6/*
   ├── /chromedriver/    # lambda layer of headless Chrome 
   │ ├── /chromedriver   # chrome driver
   │ └── /headless-chromium # headless chrome binary
-  └── /serverless.yaml     
+  └── /serverless.yaml
 ── /lambda/            # lambda function
   ├── /handler.py      # source code of lambda function 
   └── /serverless.yaml # serverless config
@@ -54,17 +54,17 @@ $ rm headless-chromium.zip
 Go to root directory of project
 ```buildoutcfg
 $ cd seleniumLayer
-$ sls deploy 
+$ sls deploy --aws-profile YOUR_AWS_PROFILE
 ```
 
 ### Deploy Lambda Function
 Go to root directory of project
 ```buildoutcfg
 $ cd lambda
-$ sls deploy 
+$ sls deploy --aws-profile YOUR_AWS_PROFILE
 ```
 
-### Start Testing 
+### Start Testing
 Go to root directory of project
 ```buildoutcfg
 $ cd lambda
